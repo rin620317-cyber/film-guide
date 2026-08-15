@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pixel 7a フィルム風写真ガイド</title>
+<meta name="description" content="Pixel 7a で撮る、フィルム風写真の撮り方と編集レシピ。スライダーで仕上がりを確かめながら、そのまま真似できます。">
+<meta name="theme-color" content="#15120f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pixel 7a フィルム風写真ガイド">
+<meta property="og:description" content="撮り方3つと編集レシピ10項目。スライダーを動かすと仕上がりが変わります。">
+<meta property="og:image" content="card.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2315120f'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23e0a45c' stroke-width='2.5'/%3E%3Crect x='3' y='6' width='3' height='3' fill='%23e0a45c'/%3E%3Crect x='3' y='13' width='3' height='3' fill='%23e0a45c'/%3E%3Crect x='3' y='20' width='3' height='3' fill='%23e0a45c'/%3E%3Crect x='26' y='6' width='3' height='3' fill='%23e0a45c'/%3E%3Crect x='26' y='13' width='3' height='3' fill='%23e0a45c'/%3E%3Crect x='26' y='20' width='3' height='3' fill='%23e0a45c'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#15120f;
+    --bg2:#1d1916;
+    --card:#221d19;
+    --line:rgba(255,240,220,.12);
+    --ink:#f2ebe0;
+    --ink2:#b6aa9c;
+    --ink3:#7d7369;
+    --amber:#e0a45c;
+    --amber-soft:rgba(224,164,92,.14);
+    --green:#8fae7f;
+    --blue:#7c9cb5;
+    --r:16px;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP","Yu Gothic",sans-serif;
+    line-height:1.75;
+    font-size:15px;
+    letter-spacing:.01em;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:0 18px 80px}
+
+  /* ---------- HERO ---------- */
+  header{
+    padding:56px 0 30px;
+    text-align:center;
+    position:relative;
+  }
+  .kicker{
+    font-size:11px;letter-spacing:.28em;color:var(--amber);
+    text-transform:uppercase;margin-bottom:14px;font-weight:700;
+  }
+  h1{
+    font-size:29px;line-height:1.4;margin:0 0 14px;font-weight:800;letter-spacing:.01em;
+  }
+  h1 .thin{font-weight:400;color:var(--ink2);display:block;font-size:15px;margin-top:10px;letter-spacing:.05em}
+  .lede{color:var(--ink2);font-size:14px;max-width:460px;margin:0 auto}
+  .filmstrip{
+    display:flex;gap:5px;justify-content:center;margin:26px 0 0;
+  }
+  .filmstrip i{
+    display:block;width:16px;height:22px;border-radius:2px;
+    background:var(--bg2);border:1px solid var(--line);
+  }
+  .filmstrip i:nth-child(-n+3){background:var(--amber-soft);border-color:rgba(224,164,92,.35)}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky;top:0;z-index:40;
+    background:rgba(21,18,15,.86);
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+    margin:0 -18px 34px;padding:9px 18px;
+  }
+  .navrow{display:flex;gap:7px;max-width:720px;margin:0 auto;overflow-x:auto;scrollbar-width:none}
+  .navrow::-webkit-scrollbar{display:none}
+  .navrow a{
+    flex:0 0 auto;color:var(--ink2);text-decoration:none;font-size:12.5px;font-weight:600;
+    padding:7px 13px;border-radius:100px;border:1px solid var(--line);white-space:nowrap;
+  }
+  .navrow a:active{background:var(--amber-soft);color:var(--amber)}
+
+  /* ---------- SECTION ---------- */
+  section{margin-bottom:52px;scroll-margin-top:60px}
+  .shead{display:flex;align-items:baseline;gap:11px;margin-bottom:6px}
+  .snum{
+    font-size:11px;font-weight:800;color:var(--amber);letter-spacing:.18em;
+    border:1px solid rgba(224,164,92,.4);border-radius:100px;padding:2px 9px;flex:0 0 auto;
+  }
+  h2{font-size:20px;margin:0;font-weight:800;letter-spacing:.02em}
+  .sdesc{color:var(--ink2);font-size:13.5px;margin:0 0 20px}
+
+  /* ---------- CARDS ---------- */
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+    padding:17px 17px 18px;margin-bottom:11px;
+  }
+  .card h3{
+    margin:0 0 7px;font-size:15.5px;font-weight:700;display:flex;align-items:center;gap:9px;
+  }
+  .dot{
+    width:24px;height:24px;flex:0 0 auto;border-radius:8px;background:var(--amber-soft);
+    color:var(--amber);font-size:12px;font-weight:800;display:grid;place-items:center;
+  }
+  .card p{margin:0;color:var(--ink2);font-size:13.5px}
+  .card p b{color:var(--ink);font-weight:700}
+  .tag{
+    display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.06em;
+    padding:2px 8px;border-radius:100px;margin-left:auto;flex:0 0 auto;
+  }
+  .tag.must{background:rgba(224,164,92,.16);color:var(--amber)}
+  .tag.opt{background:rgba(124,156,181,.14);color:var(--blue)}
+
+  /* ---------- DEMO ---------- */
+  .demo{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+    padding:16px;margin-bottom:14px;
+  }
+  .stage{
+    position:relative;width:100%;aspect-ratio:4/3;border-radius:11px;overflow:hidden;
+    background:#000;isolation:isolate;
+  }
+  .scene{position:absolute;inset:0;transition:filter .18s linear}
+  .sky{position:absolute;inset:0;background:linear-gradient(#1d3f63 0%,#4f6f88 26%,#c98a5a 62%,#e8b478 78%,#f0cf9d 100%)}
+  .sun{
+    position:absolute;left:50%;top:63%;width:19%;aspect-ratio:1;transform:translate(-50%,-50%);
+    border-radius:50%;background:radial-gradient(circle,#fff6dd 0%,#ffd98f 45%,rgba(255,190,110,0) 72%);
+  }
+  .cloud{
+    position:absolute;height:5px;border-radius:100px;background:rgba(255,225,195,.5);filter:blur(3px);
+  }
+  .sea{
+    position:absolute;left:0;right:0;bottom:0;height:31%;
+    background:linear-gradient(#b9784c,#5c3f38 55%,#2b2226);
+  }
+  .glint{
+    position:absolute;left:44%;right:44%;bottom:0;height:31%;
+    background:linear-gradient(rgba(255,215,160,.55),rgba(255,215,160,0));filter:blur(4px);
+  }
+  .figure{
+    position:absolute;bottom:27%;left:41%;width:5.4%;height:19%;background:#171012;
+    border-radius:44% 44% 8% 8%;
+  }
+  .figure:after{
+    content:"";position:absolute;left:14%;top:-26%;width:72%;aspect-ratio:1;background:#171012;
+    border-radius:50%;
+  }
+  .land{position:absolute;left:0;right:0;bottom:29%;height:4%;background:#181113}
+  /* overlays */
+  .lift{position:absolute;inset:0;mix-blend-mode:screen;pointer-events:none;
+        background:linear-gradient(#3a2e26,#2b2620)}
+  .vig{position:absolute;inset:0;pointer-events:none;
+       background:radial-gradient(ellipse at 50% 48%,rgba(0,0,0,0) 46%,rgba(0,0,0,.85) 118%)}
+  .grain{
+    position:absolute;inset:-30%;pointer-events:none;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+    animation:grainmove .7s steps(3) infinite;
+  }
+  @keyframes grainmove{
+    0%{transform:translate(0,0)}33%{transform:translate(-3%,2%)}66%{transform:translate(2%,-3%)}100%{transform:translate(0,0)}
+  }
+  .stagelabel{
+    position:absolute;left:10px;top:10px;z-index:5;font-size:10.5px;font-weight:800;
+    letter-spacing:.14em;padding:4px 9px;border-radius:100px;
+    background:rgba(0,0,0,.5);backdrop-filter:blur(6px);color:#fff;
+  }
+  .ctrl{margin-top:15px}
+  .ctrlhead{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;margin-bottom:9px}
+  .ctrlhead b{font-weight:700}
+  .ctrlhead span{color:var(--amber);font-weight:800;font-variant-numeric:tabular-nums}
+  input[type=range]{
+    -webkit-appearance:none;appearance:none;width:100%;height:26px;background:transparent;margin:0;
+  }
+  input[type=range]::-webkit-slider-runnable-track{
+    height:5px;border-radius:100px;
+    background:linear-gradient(90deg,var(--amber) var(--p,50%),rgba(255,240,220,.14) var(--p,50%));
+  }
+  input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:#f5ede1;
+    margin-top:-10px;box-shadow:0 2px 8px rgba(0,0,0,.5);border:none;
+  }
+  input[type=range]::-moz-range-track{height:5px;border-radius:100px;background:rgba(255,240,220,.14)}
+  input[type=range]::-moz-range-progress{height:5px;border-radius:100px;background:var(--amber)}
+  input[type=range]::-moz-range-thumb{width:24px;height:24px;border:none;border-radius:50%;background:#f5ede1}
+  .scale{position:relative;height:16px;font-size:10.5px;color:var(--ink3);margin-top:-2px}
+  .scale span{position:absolute;white-space:nowrap}
+  .scale .s1{left:0}
+  .scale .s2{left:66.6%;transform:translateX(-50%);color:var(--amber)}
+  .scale .s3{right:0}
+  .hint{font-size:12px;color:var(--ink3);margin:12px 0 0;text-align:center}
+
+  /* ---------- SLIDER RECIPE ---------- */
+  .recipe{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:6px 15px 12px}
+  .row{padding:11px 0;border-bottom:1px solid rgba(255,240,220,.06)}
+  .row:last-child{border-bottom:none}
+  .rtop{display:flex;align-items:center;gap:8px;margin-bottom:7px}
+  .rname{font-size:13.5px;font-weight:600}
+  .rval{margin-left:auto;font-size:14px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--ink)}
+  .star{font-size:9.5px;color:var(--amber);letter-spacing:.1em}
+  .bar{position:relative;height:6px;border-radius:100px;background:rgba(255,240,220,.09)}
+  .bar .mid{position:absolute;left:50%;top:-3px;bottom:-3px;width:1px;background:rgba(255,240,220,.22)}
+  .bar .fill{position:absolute;top:0;bottom:0;border-radius:100px;background:var(--amber);transition:all .18s}
+  .bar.neg .fill{background:var(--blue)}
+  .rnote{font-size:11.5px;color:var(--ink3);margin-top:6px}
+  .keyrow{background:rgba(224,164,92,.06);margin:0 -15px;padding:11px 15px;border-radius:10px}
+
+  /* ---------- APPS ---------- */
+  .app{display:flex;gap:13px;align-items:flex-start;padding:14px 0;border-bottom:1px solid rgba(255,240,220,.06)}
+  .app:last-child{border-bottom:none}
+  .icon{
+    width:40px;height:40px;flex:0 0 auto;border-radius:11px;display:grid;place-items:center;
+    font-size:15px;font-weight:800;color:#15120f;
+  }
+  .app b{display:block;font-size:14.5px;margin-bottom:2px}
+  .app small{color:var(--ink2);font-size:12.5px;line-height:1.65;display:block}
+  .free{font-size:10px;color:var(--green);font-weight:700;letter-spacing:.05em}
+
+  /* ---------- CHECKLIST ---------- */
+  .check{display:flex;align-items:center;gap:11px;padding:12px 0;cursor:pointer;user-select:none;
+         border-bottom:1px solid rgba(255,240,220,.06)}
+  .check:last-child{border-bottom:none}
+  .box{
+    width:21px;height:21px;flex:0 0 auto;border-radius:6px;border:1.5px solid var(--ink3);
+    display:grid;place-items:center;font-size:12px;color:#15120f;transition:.14s;
+  }
+  .check.on .box{background:var(--amber);border-color:var(--amber)}
+  .check.on .txt{color:var(--ink3);text-decoration:line-through}
+  .txt{font-size:13.5px}
+
+  footer{text-align:center;color:var(--ink3);font-size:11.5px;padding-top:12px;line-height:2}
+  .rule{height:1px;background:var(--line);margin:0 0 22px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker">Pixel 7a</div>
+  <h1>フィルム風の写真を撮る<span class="thin">標準カメラ ＋ Google フォトだけで完結</span></h1>
+  <p class="lede">アプリを入れなくても大丈夫。「撮り方を少し変える」→「あとから数値を9つ動かす」の2段階です。</p>
+  <div class="filmstrip"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+</header>
+
+<nav><div class="navrow">
+  <a href="#demo">見た目の違い</a>
+  <a href="#shoot">1. 撮り方</a>
+  <a href="#edit">2. 編集レシピ</a>
+  <a href="#apps">3. アプリ</a>
+  <a href="#check">チェック</a>
+</div></nav>
+
+<!-- ============ DEMO ============ -->
+<section id="demo">
+  <div class="shead"><span class="snum">DEMO</span><h2>どう変わる？</h2></div>
+  <p class="sdesc">スライダーを動かすと、写真と下の数値が一緒に変化します。まずは触ってみてください。</p>
+
+  <div class="demo">
+    <div class="stage">
+      <div class="stagelabel" id="lbl">標準</div>
+      <div class="scene" id="scene">
+        <div class="sky"></div>
+        <div class="cloud" style="left:8%;top:22%;width:26%"></div>
+        <div class="cloud" style="left:56%;top:15%;width:32%"></div>
+        <div class="cloud" style="left:38%;top:33%;width:20%"></div>
+        <div class="sun"></div>
+        <div class="land"></div>
+        <div class="figure"></div>
+        <div class="sea"></div>
+        <div class="glint"></div>
+      </div>
+      <div class="lift" id="lift" style="opacity:0"></div>
+      <div class="vig" id="vig" style="opacity:0"></div>
+      <div class="grain" id="grain" style="opacity:0"></div>
+    </div>
+
+    <div class="ctrl">
+      <div class="ctrlhead"><b>フィルムらしさ</b><span id="pct">0 %</span></div>
+      <input type="range" id="amt" min="0" max="150" value="0" step="1">
+      <div class="scale"><span class="s1">スマホそのまま</span><span class="s2">▲ おすすめ</span><span class="s3">強め</span></div>
+    </div>
+    <p class="hint">※ 作例はイラストです。実際の写真でも同じ方向に変化します</p>
+  </div>
+</section>
+
+<!-- ============ SHOOT ============ -->
+<section id="shoot">
+  <div class="shead"><span class="snum">STEP 1</span><h2>撮るとき</h2></div>
+  <p class="sdesc">Pixelの標準カメラのまま。意識するのは3つだけです。</p>
+
+  <div class="card">
+    <h3><span class="dot">1</span>2倍ズームで撮る<span class="tag must">効果大</span></h3>
+    <p>広角(1x)や超広角(0.5x)は「スマホっぽさ」の正体です。<b>2xにして一歩下がる</b>と、フィルムカメラ特有の奥行きの詰まった見え方になります。人物・料理・街角、どれもこれだけで別物に。</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="dot">2</span>明るさを少し下げる<span class="tag must">効果大</span></h3>
+    <p>撮る前に<b>画面を1回タップ</b>すると、右側にスライダーが2本出ます。上の「明るさ」を<b>少し下げる</b>、下の「影」を<b>少し上げる</b>。これでPixel特有のクッキリしすぎた感じが取れて、空気感が出ます。</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="dot">3</span>光を画面に入れる<span class="tag opt">雰囲気づけ</span></h3>
+    <p>夕日・窓の光・街灯・イルミネーション。<b>光源を画面の端に少し入れる</b>とにじみ(フレア)が出て、一気にエモくなります。夜は<b>夜景モードをオフ</b>に。暗いところは暗いまま残すほうがフィルムらしいです。</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="dot">＋</span>もっと遊ぶなら<span class="tag opt">おまけ</span></h3>
+    <p>カメラの「モード」→<b>動き</b>で、光の軌跡が伸びる<b>長時間露光</b>や、背景が流れる<b>アクションパン</b>が使えます。夜の街や走る子ども・電車におすすめ。</p>
+  </div>
+</section>
+
+<!-- ============ EDIT ============ -->
+<section id="edit">
+  <div class="shead"><span class="snum">STEP 2</span><h2>編集レシピ</h2></div>
+  <p class="sdesc">Googleフォトで写真を開く →「編集」→「調整」。上から順に、この数字に合わせるだけ。<br>★の2つが“フィルムらしさ”の正体です。</p>
+  <div class="recipe" id="recipe"></div>
+  <p class="hint">一度作ったら → 写真を長押し →「編集内容をコピー」で、他の写真にも貼り付けられます</p>
+</section>
+
+<!-- ============ APPS ============ -->
+<section id="apps">
+  <div class="shead"><span class="snum">STEP 3</span><h2>アプリを足すなら</h2></div>
+  <p class="sdesc">なくても十分ですが、もっと手軽に／もっと本格的にしたい場合。</p>
+  <div class="card" style="padding:4px 16px 8px">
+    <div class="app">
+      <div class="icon" style="background:linear-gradient(135deg,#f0b96b,#d97b5a)">D</div>
+      <div><b>Dazz Cam / 1998 Cam</b><span class="free">一部無料</span>
+      <small>撮った瞬間から使い捨てカメラ風。光漏れ・日付入り。編集が面倒な人はこれ1本でOK。</small></div>
+    </div>
+    <div class="app">
+      <div class="icon" style="background:linear-gradient(135deg,#e6ded2,#a89c8c)">V</div>
+      <div><b>VSCO</b><span class="free">無料枠あり</span>
+      <small>定番のプリセット集。無料分だけでも十分フィルムっぽい。迷ったら暖色系を。</small></div>
+    </div>
+    <div class="app">
+      <div class="icon" style="background:linear-gradient(135deg,#8fb0d4,#5d7fa8)">L</div>
+      <div><b>Lightroom モバイル</b><span class="free">基本無料</span>
+      <small>本気で追い込む人向け。カメラ設定で<b>RAW/JPEG</b>をオンにしておくと画質を保ったまま調整できます。</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHECK ============ -->
+<section id="check">
+  <div class="shead"><span class="snum">CHECK</span><h2>まずはこれだけ</h2></div>
+  <p class="sdesc">タップでチェックできます。この4つで見え方はかなり変わります。</p>
+  <div class="card" id="checklist" style="padding:4px 16px 8px"></div>
+</section>
+
+<div class="rule"></div>
+<footer>
+  Pixel 7a / Google フォト 用ガイド<br>
+  数値はあくまで目安です。好みで前後させてください。
+</footer>
+
+</div>
+
+<script>
+/* ---------- 編集レシピのデータ ---------- */
+const RECIPE = [
+  {n:"HDR 効果",  v:-40, note:"まず全体を平らに。ギラつきを消す", key:0},
+  {n:"ハイライト", v:-20, note:"明るい部分の白飛びを抑える", key:0},
+  {n:"シャドウ",   v:15,  note:"暗い部分を少しだけ持ち上げる", key:0},
+  {n:"ブラック",   v:20,  note:"黒を“浮かせる”。フィルムの淡さの正体", key:1},
+  {n:"コントラスト",v:-10, note:"メリハリを少し弱める", key:0},
+  {n:"彩度",      v:-15, note:"色を少し抜くと途端に上品に", key:0},
+  {n:"暖かみ",    v:10,  note:"＋で夕方の色、−で冬・夜の色", key:0},
+  {n:"粒状感",    v:40,  note:"フィルムのざらざら。これが決め手", key:1, uni:1},
+  {n:"ビネット",  v:25,  note:"四隅を落として視線を中心へ", key:0, uni:1},
+  {n:"シャープ",  v:0,   note:"上げない。0のままで", key:0, uni:1}
+];
+
+const rec = document.getElementById('recipe');
+RECIPE.forEach((r,i)=>{
+  const el = document.createElement('div');
+  el.className = 'row' + (r.key ? ' keyrow' : '');
+  el.innerHTML = `
+    <div class="rtop">
+      <span class="rname">${r.n}</span>
+      ${r.key?'<span class="star">★ 重要</span>':''}
+      <span class="rval" id="v${i}">0</span>
+    </div>
+    <div class="bar ${r.v<0?'neg':''}" ${r.uni?'':'data-mid="1"'}>
+      ${r.uni?'':'<div class="mid"></div>'}
+      <div class="fill" id="f${i}"></div>
+    </div>
+    <div class="rnote">${r.note}</div>`;
+  rec.appendChild(el);
+});
+
+/* ---------- チェックリスト ---------- */
+const CHECKS = [
+  "カメラを 2x にして撮る",
+  "画面をタップして明るさを少し下げる",
+  "Googleフォトで「ブラック」を上げる",
+  "「粒状感」を足す"
+];
+const cl = document.getElementById('checklist');
+CHECKS.forEach(t=>{
+  const d = document.createElement('div');
+  d.className='check';
+  d.innerHTML = `<div class="box">✓</div><div class="txt">${t}</div>`;
+  d.onclick = ()=> d.classList.toggle('on');
+  cl.appendChild(d);
+});
+
+/* ---------- スライダー連動 ---------- */
+const amt   = document.getElementById('amt');
+const scene = document.getElementById('scene');
+const lift  = document.getElementById('lift');
+const vig   = document.getElementById('vig');
+const grain = document.getElementById('grain');
+const pct   = document.getElementById('pct');
+const lbl   = document.getElementById('lbl');
+
+function render(){
+  const t = amt.value/100;                 // 1.0 = おすすめ
+  amt.style.setProperty('--p', (amt.value/1.5)+'%');
+  const name = t===0 ? '標準' : (t<0.6 ? 'ほんのり' : (t<=1.1 ? 'おすすめ' : '強め'));
+  pct.textContent = name;
+  lbl.textContent = name;
+
+  /* 写真プレビュー */
+  scene.style.filter =
+    `contrast(${(1-0.16*t).toFixed(3)}) `+
+    `saturate(${(1-0.28*t).toFixed(3)}) `+
+    `brightness(${(1-0.05*t).toFixed(3)}) `+
+    `sepia(${(0.16*t).toFixed(3)}) `+
+    `hue-rotate(${(-4*t).toFixed(1)}deg)`;
+  lift.style.opacity  = (0.20*t).toFixed(3);
+  vig.style.opacity   = (0.55*t).toFixed(3);
+  grain.style.opacity = (0.34*t).toFixed(3);
+
+  /* レシピ数値 */
+  RECIPE.forEach((r,i)=>{
+    const val = Math.round(r.v * t);
+    const vEl = document.getElementById('v'+i);
+    const fEl = document.getElementById('f'+i);
+    vEl.textContent = (val>0?'+':'') + val;
+    vEl.style.color = val===0 ? 'var(--ink3)' : (val<0 ? 'var(--blue)' : 'var(--amber)');
+    const w = Math.min(Math.abs(val),100)/2;   // 半幅 = 最大50%
+    if(r.uni){
+      fEl.style.left  = '0%';
+      fEl.style.width = Math.min(Math.abs(val),100)+'%';
+    }else if(val<0){
+      fEl.style.left  = (50-w)+'%';
+      fEl.style.width = w+'%';
+    }else{
+      fEl.style.left  = '50%';
+      fEl.style.width = w+'%';
+    }
+  });
+}
+amt.addEventListener('input',render);
+render();
+
+/* 初回だけ、ゆっくり「おすすめ」まで動かして違いを見せる */
+setTimeout(()=>{
+  let v=0;
+  const id=setInterval(()=>{
+    v+=2; if(v>=100){v=100;clearInterval(id);}
+    amt.value=v; render();
+  },22);
+},600);
+</script>
+</body>
+</html>
